@@ -1,0 +1,5 @@
+body, p, label, textarea, button, input {font-size: 110%}
+form table th {text-align: right; padding-right: 15px}
+p {margin-bottom: 1em}
+.row ul li {margin-bottom: 1em}
+.ws_details label {font-weight: bold}
