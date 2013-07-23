@@ -1,0 +1,66 @@
+<form class="add-point-form form-horizontal" method="post" action="{% url add_point %}">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label" for="id_name">Название:</label>
+      <div class="controls">
+        {{form.name}}
+        {% if form.name.errors %} 
+         	<span class="help-inline">{{ form.name.errors }}</span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="control-group {{form.waste_types.errors|yesno:"error,"}}">
+      <label class="control-label">Принимают<span class="red">*</span>:</label>
+      <div class="controls">
+        {{ form.waste_types }}
+        {% if form.waste_types.errors %} 
+         	<span class="help-inline">{{ form.waste_types.errors }}</span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="control-group {{form.adress.errors|yesno:"error,"}}">
+      <label class="control-label" for="id_adress">Адрес<span class="red">*</span>:</label>
+      <div class="controls">
+        {{ form.adress }}
+        <img style="display: block" src="https://developers.google.com/maps/documentation/places/images/powered-by-google-on-white.png">
+        {% if form.adress.errors %} 
+         	<span class="help-inline">{{ form.adress.errors }}</span>
+        {% endif %}
+      </div>
+    </div>
+    <a class="btn btn-large btn-info show-additional-fields" href="#">
+    	<i class="icon-list-alt icon-white"></i> Показать дополнительные поля
+    </a>
+    <fieldset class='additional-fields hide'>
+	    <div class="control-group {{form.work_time.errors|yesno:"error,"}}">
+	      <label class="control-label">Время работы:</label>
+	      <div class="controls">
+	        {{ form.work_time }}
+	        {% if form.work_time.errors %} 
+	         	<span class="help-inline">{{ form.work_time.errors }}</span>
+	        {% endif %}
+	      </div>
+	    </div>
+	    <div class="control-group {{form.phone.errors|yesno:"error,"}}">
+	      <label class="control-label">Телефон:</label>
+	      <div class="controls">
+	        {{ form.phone }}
+	        {% if form.phone.errors %} 
+	         	<span class="help-inline">{{ form.phone.errors }}</span>
+	        {% endif %}
+	      </div>
+	    </div>
+	    <div class="control-group {{form.comment.errors|yesno:"error,"}}">
+	      <label class="control-label">Примечения:</label>
+	      <div class="controls">
+	        {{ form.comment }}
+	        {% if form.comment.errors %} 
+	         	<span class="help-inline">{{ form.comment.errors }}</span>
+	        {% endif %}
+	      </div>
+	    </div>
+	    
+    </fieldset>
+    
+  </fieldset>
+</form>

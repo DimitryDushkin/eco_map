@@ -6,6 +6,7 @@ MAIN_MODULE_ROOT = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(MAIN_MODULE_ROOT)
 LIB_ROOT = os.path.join(PROJECT_ROOT, 'lib')
 sys.path.append(LIB_ROOT)
+sys.path.append(os.path.abspath(LIB_ROOT + '/google-api-python-client'))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -18,7 +19,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': os.path.join(MAIN_MODULE_ROOT, 'data.db'),                         # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
@@ -101,7 +102,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
@@ -124,11 +125,11 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

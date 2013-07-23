@@ -1,0 +1,3028 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<title>Video Listing</title>
+
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/main.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/font-awesome.css" />
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/jquery.js"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/json.js"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/hc_fix.js"></script>
+<script src="https://class.coursera.org/assets/core/js/bootstrap/bootstrap-modal.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/modal_focus.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/bind_modal_focus.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/get_query_parameters.js"></script>
+<script src="https://class.coursera.org/assets/app/generic/js/list_accordian.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/generic/css/item_list.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/jquery_ui/jquery_ui.css" />
+<script src="https://class.coursera.org/assets/core/js/jquery_ui.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/font-awesome.css" />
+<script src="https://class.coursera.org/assets/core/js/bootstrap/bootstrap-twipsy.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/lecture/css/lecture_dialog.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/lecture/css/lecture_list.css?version=20120321" />
+<script src="https://class.coursera.org/assets/app/lecture/js/lecture_list_functions.js?view_url=https://class.coursera.org/ml/lecture/view&version=20120213"></script>
+<script src="https://class.coursera.org/assets/app/lecture/js/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/lecture/css/jquery.fancybox-1.3.4.css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28377374-1']);
+  _gaq.push(['_setDomainName', 'coursera.org']);
+  _gaq.push(['_setAllowLinker', true]);  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  window._204 = window._204 || [];
+  window._204.push({key:"pageview", val:{}});
+
+  (function()
+  {
+    var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+    a.src = 'https://eventing.coursera.org/204.min.js?client=spark&user=21338';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(a, s);
+  })();
+
+</script>
+<link rel="icon" href="https://spark-public.s3.amazonaws.com/ml/static/images/favicon.ico" />
+
+</head>
+
+<body>
+    <a href="#page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+
+	
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="container-fluid"
+                          >
+            <a target="_new" href="http://www.coursera.org/" class="brand">
+				Coursera				<span style="background-color:#387690;padding-top:100px" class="label warning">Beta</span>
+			</a>
+            <ul class="nav secondary-nav">
+                                                    <li style="padding: 10px 10px 11px; color:#BFBFBF; font-size:14px; border-right: solid 1px #333">Dmitry</li>
+                                        <li><a href="https://class.coursera.org/ml/class/preferences">Preferences</a></li>
+                                        <li><a href="http://www.coursera.org/">All Courses</a></li>
+
+                                        
+                    
+                    <li><a href="https://class.coursera.org/ml/class/aboutus">About</a></li>
+                    <li><a href="https://class.coursera.org/ml/auth/feedback">Contact Us</a></li>
+                                        <li><a href="https://class.coursera.org/ml/auth/logout">Logout</a></li>
+                                                </ul>
+        </div>
+    </div>
+</div>
+
+<div id="banner-top" style="background:repeat-x url('https://s3.amazonaws.com/coursera/universities/stanford/top-banner-background.png')">
+    <div id="course-logo-text">
+        <a href="https://class.coursera.org/ml/class/index">
+            <div>
+                <div>
+                    <img src="https://s3.amazonaws.com/coursera/universities/stanford/top-banner.png" />
+                </div>
+                <div style="position:absolute;top:45px;left:17px;">
+                    <img class="course-logo-image" height="68" width="120" src="https://s3.amazonaws.com/coursera/topics/ml/small-icon.hover.png">
+                </div>
+            </div>
+            <div class="course-logo-name" style="position:absolute;top:85px;left:155px;">
+                <nobr>Machine Learning</nobr>
+            </div>
+        </a>
+    </div>
+    <div id="banner-course-info">
+        <div class="course-instructor-name">Andrew Ng</div>
+        <div class="course-time">Professor of Computer Science</div>
+    </div>
+</div>
+    
+        <div class="container-fluid">
+        <div class="sidebar page-sidebar" id="page-sidebar">
+            <ul style="list-style-type:none;margin-left:0px;">
+		<li>
+		<p class="navbar_item navbar_home">
+				<a href="https://class.coursera.org/ml/class/index"  >
+			Home		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_">
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_lecture">
+				<a href="https://class.coursera.org/ml/lecture/index"  >
+			Video Lectures		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_quiz">
+				<a href="https://class.coursera.org/ml/quiz/index"  >
+			Review Questions		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_assignment">
+				<a href="https://class.coursera.org/ml/assignment/index"  >
+			Programming Exercises		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_">
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_forum">
+				<a href="https://class.coursera.org/ml/forum/index"  >
+			Discussion Forums		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://share.coursera.org/wiki/index.php/ML:Main"  >
+			Course Wiki		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/ml/wiki/view?page=CourseSchedule"  >
+			Course Schedule		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/ml/wiki/view?page=CourseInformation"  >
+			Course Information		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/ml/wiki/view?page=CourseFAQ"  >
+			Course FAQ		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_">
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/ml/wiki/view?page=OctaveInstallation"  >
+			Octave Installation		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="http://www.universalsubtitles.org/en/teams/coursera/p/ml" target="_blank" >
+			Help with Subtitles		</a>
+				</p>
+	</li>
+	</ul>
+        </div>
+        <div class="content page-content" id="page-content">
+            <div style="float: left;">
+    <h2 style="padding-bottom:12px">Video Lectures</h2>
+</div>
+
+
+<div class="item_list">
+<a href="#" class="list_header_link expanded"><h3 class="list_header">I. Introduction (Week 1)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=1 " rel="lecture-link" class="lecture-link">
+Welcome (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture1.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Welcome (7 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture1.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Welcome (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=1_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Welcome (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=1_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Welcome (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=1"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Welcome (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=2 " rel="lecture-link" class="lecture-link">
+What is Machine Learning? (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=2_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for What is Machine Learning? (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=2_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for What is Machine Learning? (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=2"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for What is Machine Learning? (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=3 " rel="lecture-link" class="lecture-link">
+Supervised Learning (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=3_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Supervised Learning (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=3_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Supervised Learning (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=3"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Supervised Learning (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=4 " rel="lecture-link" class="lecture-link">
+Unsupervised Learning (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=4_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Unsupervised Learning (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=4_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Unsupervised Learning (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=4"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Unsupervised Learning (14 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">II. Linear Regression with One Variable (Week 1)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=5 " rel="lecture-link" class="lecture-link">
+Model Representation (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture2.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Model Representation (8 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture2.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Model Representation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=5_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Model Representation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=5_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Model Representation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=5"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Model Representation (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=6 " rel="lecture-link" class="lecture-link">
+Cost Function (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=6_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Cost Function (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=6_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Cost Function (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=6"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Cost Function (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=7 " rel="lecture-link" class="lecture-link">
+Cost Function - Intuition I (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=7_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Cost Function - Intuition I (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=7_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Cost Function - Intuition I (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=7"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Cost Function - Intuition I (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=8 " rel="lecture-link" class="lecture-link">
+Cost Function - Intuition II (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=8_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Cost Function - Intuition II (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=8_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Cost Function - Intuition II (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=8"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Cost Function - Intuition II (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=11 " rel="lecture-link" class="lecture-link">
+Gradient Descent (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=11_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Descent (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=11_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Descent (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=11"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Descent (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=10 " rel="lecture-link" class="lecture-link">
+Gradient Descent Intuition (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=10_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Descent Intuition (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=10_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Descent Intuition (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=10"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Descent Intuition (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=9 " rel="lecture-link" class="lecture-link">
+Gradient Descent For Linear Regression (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=9_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Descent For Linear Regression (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=9_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Descent For Linear Regression (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=9"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Descent For Linear Regression (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=12 " rel="lecture-link" class="lecture-link">
+What's Next (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=12_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for What's Next (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=12_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for What's Next (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=12"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for What's Next (6 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">III. Linear Algebra Review (Week 1, Optional)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=13 " rel="lecture-link" class="lecture-link">
+Matrices and Vectors (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture3.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Matrices and Vectors (9 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture3.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Matrices and Vectors (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=13_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Matrices and Vectors (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=13_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Matrices and Vectors (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=13"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Matrices and Vectors (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=14 " rel="lecture-link" class="lecture-link">
+Addition and Scalar Multiplication (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=14_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Addition and Scalar Multiplication (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=14_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Addition and Scalar Multiplication (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=14"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Addition and Scalar Multiplication (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=15 " rel="lecture-link" class="lecture-link">
+Matrix Vector Multiplication (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=15_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Matrix Vector Multiplication (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=15_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Matrix Vector Multiplication (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=15"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Matrix Vector Multiplication (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=16 " rel="lecture-link" class="lecture-link">
+Matrix Matrix Multiplication (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=16_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Matrix Matrix Multiplication (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=16_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Matrix Matrix Multiplication (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=16"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Matrix Matrix Multiplication (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=17 " rel="lecture-link" class="lecture-link">
+Matrix Multiplication Properties (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=17_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Matrix Multiplication Properties (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=17_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Matrix Multiplication Properties (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=17"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Matrix Multiplication Properties (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=18 " rel="lecture-link" class="lecture-link">
+Inverse and Transpose (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=18_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Inverse and Transpose (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=18_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Inverse and Transpose (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=18"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Inverse and Transpose (11 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">IV. Linear Regression with Multiple Variables (Week 2)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=19 " rel="lecture-link" class="lecture-link">
+Multiple Features (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture4.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Multiple Features (8 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture4.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Multiple Features (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=19_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Multiple Features (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=19_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Multiple Features (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=19"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Multiple Features (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=20 " rel="lecture-link" class="lecture-link">
+Gradient Descent for Multiple Variables (5 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=20_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Descent for Multiple Variables (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=20_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Descent for Multiple Variables (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=20"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Descent for Multiple Variables (5 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=21 " rel="lecture-link" class="lecture-link">
+Gradient Descent in Practice I - Feature Scaling (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=21_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Descent in Practice I - Feature Scaling (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=21_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Descent in Practice I - Feature Scaling (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=21"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Descent in Practice I - Feature Scaling (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=22 " rel="lecture-link" class="lecture-link">
+Gradient Descent in Practice II - Learning Rate (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=22_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Descent in Practice II - Learning Rate (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=22_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Descent in Practice II - Learning Rate (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=22"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Descent in Practice II - Learning Rate (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=23 " rel="lecture-link" class="lecture-link">
+Features and Polynomial Regression (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=23_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Features and Polynomial Regression (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=23_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Features and Polynomial Regression (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=23"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Features and Polynomial Regression (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=24 " rel="lecture-link" class="lecture-link">
+Normal Equation (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=24_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Normal Equation (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=24_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Normal Equation (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=24"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Normal Equation (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=25 " rel="lecture-link" class="lecture-link">
+Normal Equation Noninvertibility (Optional) (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=25_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Normal Equation Noninvertibility (Optional) (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=25_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Normal Equation Noninvertibility (Optional) (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=25"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Normal Equation Noninvertibility (Optional) (6 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">V. Octave Tutorial (Week 2)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=26 " rel="lecture-link" class="lecture-link">
+Basic Operations (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture5.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Basic Operations (14 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture5.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Basic Operations (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=26_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Basic Operations (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=26_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Basic Operations (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=26"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Basic Operations (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=27 " rel="lecture-link" class="lecture-link">
+Moving Data Around (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=27_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Moving Data Around (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=27_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Moving Data Around (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=27"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Moving Data Around (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=28 " rel="lecture-link" class="lecture-link">
+Computing on Data (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=28_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Computing on Data (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=28_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Computing on Data (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=28"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Computing on Data (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=29 " rel="lecture-link" class="lecture-link">
+Plotting Data (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=29_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Plotting Data (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=29_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Plotting Data (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=29"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Plotting Data (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=31 " rel="lecture-link" class="lecture-link">
+Control Statements: for, while, if statements (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=31_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Control Statements: for, while, if statements (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=31_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Control Statements: for, while, if statements (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=31"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Control Statements: for, while, if statements (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=30 " rel="lecture-link" class="lecture-link">
+Vectorization (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=30_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Vectorization (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=30_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Vectorization (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=30"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Vectorization (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=32 " rel="lecture-link" class="lecture-link">
+Working on and Submitting Programming Exercises (4 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=32_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Working on and Submitting Programming Exercises (4 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=32_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Working on and Submitting Programming Exercises (4 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=32"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Working on and Submitting Programming Exercises (4 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">VI. Logistic Regression (Week 3)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=33 " rel="lecture-link" class="lecture-link">
+Classification (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture6.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Classification (8 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture6.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Classification (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=33_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Classification (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=33_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Classification (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=33"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Classification (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=34 " rel="lecture-link" class="lecture-link">
+Hypothesis Representation (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=34_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Hypothesis Representation (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=34_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Hypothesis Representation (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=34"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Hypothesis Representation (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=35 " rel="lecture-link" class="lecture-link">
+Decision Boundary (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=35_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Decision Boundary (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=35_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Decision Boundary (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=35"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Decision Boundary (15 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=58 " rel="lecture-link" class="lecture-link">
+Cost Function (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=58_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Cost Function (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=58_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Cost Function (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=58"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Cost Function (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=36 " rel="lecture-link" class="lecture-link">
+Simplified Cost Function and Gradient Descent (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=36_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Simplified Cost Function and Gradient Descent (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=36_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Simplified Cost Function and Gradient Descent (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=36"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Simplified Cost Function and Gradient Descent (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=37 " rel="lecture-link" class="lecture-link">
+Advanced Optimization (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=37_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Advanced Optimization (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=37_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Advanced Optimization (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=37"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Advanced Optimization (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=38 " rel="lecture-link" class="lecture-link">
+Multiclass Classification: One-vs-all (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=38_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Multiclass Classification: One-vs-all (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=38_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Multiclass Classification: One-vs-all (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=38"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Multiclass Classification: One-vs-all (6 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">VII. Regularization (Week 3)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=39 " rel="lecture-link" class="lecture-link">
+The Problem of Overfitting (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture7.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for The Problem of Overfitting (10 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture7.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for The Problem of Overfitting (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=39_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for The Problem of Overfitting (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=39_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for The Problem of Overfitting (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=39"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for The Problem of Overfitting (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=40 " rel="lecture-link" class="lecture-link">
+Cost Function (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=40_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Cost Function (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=40_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Cost Function (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=40"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Cost Function (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=41 " rel="lecture-link" class="lecture-link">
+Regularized Linear Regression (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=41_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Regularized Linear Regression (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=41_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Regularized Linear Regression (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=41"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Regularized Linear Regression (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=42 " rel="lecture-link" class="lecture-link">
+Regularized Logistic Regression (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=42_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Regularized Logistic Regression (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=42_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Regularized Logistic Regression (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=42"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Regularized Logistic Regression (9 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">VIII. Neural Networks: Representation (Week 4)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=43 " rel="lecture-link" class="lecture-link">
+Non-linear Hypotheses (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture8.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Non-linear Hypotheses (10 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture8.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Non-linear Hypotheses (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=43_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Non-linear Hypotheses (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=43_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Non-linear Hypotheses (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=43"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Non-linear Hypotheses (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=44 " rel="lecture-link" class="lecture-link">
+Neurons and the Brain (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=44_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Neurons and the Brain (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=44_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Neurons and the Brain (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=44"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Neurons and the Brain (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=45 " rel="lecture-link" class="lecture-link">
+Model Representation I (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=45_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Model Representation I (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=45_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Model Representation I (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=45"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Model Representation I (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=46 " rel="lecture-link" class="lecture-link">
+Model Representation II (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=46_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Model Representation II (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=46_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Model Representation II (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=46"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Model Representation II (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=47 " rel="lecture-link" class="lecture-link">
+Examples and Intuitions I (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=47_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Examples and Intuitions I (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=47_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Examples and Intuitions I (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=47"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Examples and Intuitions I (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=48 " rel="lecture-link" class="lecture-link">
+Examples and Intuitions II (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=48_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Examples and Intuitions II (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=48_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Examples and Intuitions II (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=48"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Examples and Intuitions II (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=49 " rel="lecture-link" class="lecture-link">
+Multiclass Classification (4 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=49_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Multiclass Classification (4 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=49_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Multiclass Classification (4 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=49"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Multiclass Classification (4 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">IX. Neural Networks: Learning (Week 5)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=50 " rel="lecture-link" class="lecture-link">
+Cost Function (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture9.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Cost Function (7 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture9.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Cost Function (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=50_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Cost Function (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=50_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Cost Function (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=50"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Cost Function (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=51 " rel="lecture-link" class="lecture-link">
+Backpropagation Algorithm (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=51_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Backpropagation Algorithm (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=51_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Backpropagation Algorithm (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=51"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Backpropagation Algorithm (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=52 " rel="lecture-link" class="lecture-link">
+Backpropagation Intuition (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=52_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Backpropagation Intuition (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=52_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Backpropagation Intuition (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=52"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Backpropagation Intuition (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=53 " rel="lecture-link" class="lecture-link">
+Implementation Note: Unrolling Parameters (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=53_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Implementation Note: Unrolling Parameters (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=53_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Implementation Note: Unrolling Parameters (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=53"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Implementation Note: Unrolling Parameters (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=54 " rel="lecture-link" class="lecture-link">
+Gradient Checking (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=54_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gradient Checking (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=54_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gradient Checking (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=54"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gradient Checking (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=55 " rel="lecture-link" class="lecture-link">
+Random Initialization (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=55_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Random Initialization (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=55_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Random Initialization (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=55"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Random Initialization (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=56 " rel="lecture-link" class="lecture-link">
+Putting It Together (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=56_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Putting It Together (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=56_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Putting It Together (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=56"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Putting It Together (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=57 " rel="lecture-link" class="lecture-link">
+Autonomous Driving (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=57_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Autonomous Driving (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=57_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Autonomous Driving (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=57"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Autonomous Driving (7 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">X. Advice for Applying Machine Learning (Week 6)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=59 " rel="lecture-link" class="lecture-link">
+Deciding What to Try Next (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture10.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Deciding What to Try Next (6 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture10.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Deciding What to Try Next (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=59_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Deciding What to Try Next (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=59_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Deciding What to Try Next (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=59"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Deciding What to Try Next (6 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=60 " rel="lecture-link" class="lecture-link">
+Evaluating a Hypothesis (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=60_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Evaluating a Hypothesis (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=60_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Evaluating a Hypothesis (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=60"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Evaluating a Hypothesis (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=61 " rel="lecture-link" class="lecture-link">
+Model Selection and Train/Validation/Test Sets (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=61_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Model Selection and Train/Validation/Test Sets (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=61_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Model Selection and Train/Validation/Test Sets (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=61"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Model Selection and Train/Validation/Test Sets (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=62 " rel="lecture-link" class="lecture-link">
+Diagnosing Bias vs. Variance (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=62_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Diagnosing Bias vs. Variance (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=62_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Diagnosing Bias vs. Variance (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=62"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Diagnosing Bias vs. Variance (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=63 " rel="lecture-link" class="lecture-link">
+Regularization and Bias/Variance (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=63_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Regularization and Bias/Variance (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=63_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Regularization and Bias/Variance (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=63"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Regularization and Bias/Variance (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=64 " rel="lecture-link" class="lecture-link">
+Learning Curves (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=64_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Learning Curves (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=64_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Learning Curves (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=64"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Learning Curves (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=65 " rel="lecture-link" class="lecture-link">
+Deciding What to Do Next Revisited (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=65_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Deciding What to Do Next Revisited (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=65_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Deciding What to Do Next Revisited (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=65"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Deciding What to Do Next Revisited (7 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XI. Machine Learning System Design (Week 6)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=66 " rel="lecture-link" class="lecture-link">
+Prioritizing What to Work On (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture11.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Prioritizing What to Work On (10 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture11.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Prioritizing What to Work On (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=66_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Prioritizing What to Work On (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=66_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Prioritizing What to Work On (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=66"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Prioritizing What to Work On (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=67 " rel="lecture-link" class="lecture-link">
+Error Analysis (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=67_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Error Analysis (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=67_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Error Analysis (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=67"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Error Analysis (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=68 " rel="lecture-link" class="lecture-link">
+Error Metrics for Skewed Classes (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=68_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Error Metrics for Skewed Classes (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=68_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Error Metrics for Skewed Classes (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=68"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Error Metrics for Skewed Classes (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=69 " rel="lecture-link" class="lecture-link">
+Trading Off Precision and Recall (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=69_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Trading Off Precision and Recall (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=69_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Trading Off Precision and Recall (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=69"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Trading Off Precision and Recall (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=70 " rel="lecture-link" class="lecture-link">
+Data For Machine Learning (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=70_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Data For Machine Learning (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=70_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Data For Machine Learning (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=70"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Data For Machine Learning (11 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XII. Support Vector Machines (Week 7)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=71 " rel="lecture-link" class="lecture-link">
+Optimization Objective (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture12.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Optimization Objective (15 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture12.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Optimization Objective (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=71_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Optimization Objective (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=71_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Optimization Objective (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=71"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Optimization Objective (15 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=72 " rel="lecture-link" class="lecture-link">
+Large Margin Intuition (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=72_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Large Margin Intuition (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=72_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Large Margin Intuition (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=72"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Large Margin Intuition (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=73 " rel="lecture-link" class="lecture-link">
+Mathematics Behind Large Margin Classification (Optional) (20 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=73_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Mathematics Behind Large Margin Classification (Optional) (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=73_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Mathematics Behind Large Margin Classification (Optional) (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=73"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Mathematics Behind Large Margin Classification (Optional) (20 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=74 " rel="lecture-link" class="lecture-link">
+Kernels I (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=74_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Kernels I (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=74_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Kernels I (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=74"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Kernels I (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=75 " rel="lecture-link" class="lecture-link">
+Kernels II (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=75_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Kernels II (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=75_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Kernels II (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=75"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Kernels II (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=76 " rel="lecture-link" class="lecture-link">
+Using An SVM (21 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=76_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Using An SVM (21 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=76_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Using An SVM (21 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=76"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Using An SVM (21 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XIII. Clustering (Week 8)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=77 " rel="lecture-link" class="lecture-link">
+Unsupervised Learning: Introduction (3 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture13.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Unsupervised Learning: Introduction (3 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture13.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Unsupervised Learning: Introduction (3 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=77_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Unsupervised Learning: Introduction (3 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=77_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Unsupervised Learning: Introduction (3 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=77"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Unsupervised Learning: Introduction (3 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=78 " rel="lecture-link" class="lecture-link">
+K-Means Algorithm (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=78_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for K-Means Algorithm (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=78_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for K-Means Algorithm (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=78"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for K-Means Algorithm (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=79 " rel="lecture-link" class="lecture-link">
+Optimization Objective (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=79_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Optimization Objective (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=79_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Optimization Objective (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=79"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Optimization Objective (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=80 " rel="lecture-link" class="lecture-link">
+Random Initialization (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=80_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Random Initialization (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=80_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Random Initialization (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=80"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Random Initialization (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=81 " rel="lecture-link" class="lecture-link">
+Choosing the Number of Clusters (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=81_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Choosing the Number of Clusters (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=81_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Choosing the Number of Clusters (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=81"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Choosing the Number of Clusters (8 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XIV. Dimensionality Reduction (Week 8)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=82 " rel="lecture-link" class="lecture-link">
+Motivation I: Data Compression (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture14.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Motivation I: Data Compression (10 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture14.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Motivation I: Data Compression (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=82_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Motivation I: Data Compression (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=82_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Motivation I: Data Compression (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=82"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Motivation I: Data Compression (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=83 " rel="lecture-link" class="lecture-link">
+Motivation II: Visualization (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=83_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Motivation II: Visualization (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=83_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Motivation II: Visualization (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=83"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Motivation II: Visualization (6 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=84 " rel="lecture-link" class="lecture-link">
+Principal Component Analysis Problem Formulation (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=84_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Principal Component Analysis Problem Formulation (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=84_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Principal Component Analysis Problem Formulation (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=84"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Principal Component Analysis Problem Formulation (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=85 " rel="lecture-link" class="lecture-link">
+Principal Component Analysis Algorithm (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=85_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Principal Component Analysis Algorithm (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=85_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Principal Component Analysis Algorithm (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=85"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Principal Component Analysis Algorithm (15 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=86 " rel="lecture-link" class="lecture-link">
+Choosing the Number of Principal Components (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=86_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Choosing the Number of Principal Components (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=86_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Choosing the Number of Principal Components (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=86"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Choosing the Number of Principal Components (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=87 " rel="lecture-link" class="lecture-link">
+Reconstruction from Compressed Representation (4 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=87_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Reconstruction from Compressed Representation (4 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=87_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Reconstruction from Compressed Representation (4 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=87"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Reconstruction from Compressed Representation (4 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=88 " rel="lecture-link" class="lecture-link">
+Advice for Applying PCA (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=88_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Advice for Applying PCA (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=88_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Advice for Applying PCA (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=88"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Advice for Applying PCA (13 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XV. Anomaly Detection (Week 9)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=89 " rel="lecture-link" class="lecture-link">
+Problem Motivation (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture15.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Problem Motivation (8 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture15.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Problem Motivation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=89_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Problem Motivation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=89_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Problem Motivation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=89"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Problem Motivation (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=90 " rel="lecture-link" class="lecture-link">
+Gaussian Distribution (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=90_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Gaussian Distribution (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=90_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Gaussian Distribution (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=90"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Gaussian Distribution (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=91 " rel="lecture-link" class="lecture-link">
+Algorithm (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=91_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Algorithm (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=91_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Algorithm (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=91"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Algorithm (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=92 " rel="lecture-link" class="lecture-link">
+Developing and Evaluating an Anomaly Detection System (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=92_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Developing and Evaluating an Anomaly Detection System (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=92_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Developing and Evaluating an Anomaly Detection System (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=92"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Developing and Evaluating an Anomaly Detection System (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=93 " rel="lecture-link" class="lecture-link">
+Anomaly Detection vs. Supervised Learning (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=93_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Anomaly Detection vs. Supervised Learning (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=93_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Anomaly Detection vs. Supervised Learning (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=93"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Anomaly Detection vs. Supervised Learning (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=95 " rel="lecture-link" class="lecture-link">
+Choosing What Features to Use (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=95_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Choosing What Features to Use (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=95_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Choosing What Features to Use (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=95"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Choosing What Features to Use (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=96 " rel="lecture-link" class="lecture-link">
+Multivariate Gaussian Distribution (Optional) (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=96_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Multivariate Gaussian Distribution (Optional) (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=96_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Multivariate Gaussian Distribution (Optional) (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=96"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Multivariate Gaussian Distribution (Optional) (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=97 " rel="lecture-link" class="lecture-link">
+Anomaly Detection using the Multivariate Gaussian Distribution (Optional) (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=97_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Anomaly Detection using the Multivariate Gaussian Distribution (Optional) (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=97_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Anomaly Detection using the Multivariate Gaussian Distribution (Optional) (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=97"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Anomaly Detection using the Multivariate Gaussian Distribution (Optional) (14 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XVI. Recommender Systems (Week 9)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=98 " rel="lecture-link" class="lecture-link">
+Problem Formulation (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture16.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Problem Formulation (8 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture16.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Problem Formulation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=98_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Problem Formulation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=98_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Problem Formulation (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=98"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Problem Formulation (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=99 " rel="lecture-link" class="lecture-link">
+Content Based Recommendations (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=99_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Content Based Recommendations (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=99_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Content Based Recommendations (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=99"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Content Based Recommendations (15 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=100 " rel="lecture-link" class="lecture-link">
+Collaborative Filtering (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=100_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Collaborative Filtering (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=100_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Collaborative Filtering (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=100"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Collaborative Filtering (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=101 " rel="lecture-link" class="lecture-link">
+Collaborative Filtering Algorithm (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=101_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Collaborative Filtering Algorithm (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=101_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Collaborative Filtering Algorithm (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=101"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Collaborative Filtering Algorithm (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=102 " rel="lecture-link" class="lecture-link">
+Vectorization: Low Rank Matrix Factorization (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=102_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Vectorization: Low Rank Matrix Factorization (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=102_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Vectorization: Low Rank Matrix Factorization (8 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=102"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Vectorization: Low Rank Matrix Factorization (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=103 " rel="lecture-link" class="lecture-link">
+Implementational Detail: Mean Normalization (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=103_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Implementational Detail: Mean Normalization (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=103_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Implementational Detail: Mean Normalization (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=103"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Implementational Detail: Mean Normalization (9 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XVII. Large Scale Machine Learning (Week 10)</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=104 " rel="lecture-link" class="lecture-link">
+Learning With Large Datasets (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture17.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Learning With Large Datasets (6 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture17.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Learning With Large Datasets (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=104_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Learning With Large Datasets (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=104_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Learning With Large Datasets (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=104"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Learning With Large Datasets (6 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=105 " rel="lecture-link" class="lecture-link">
+Stochastic Gradient Descent (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=105_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Stochastic Gradient Descent (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=105_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Stochastic Gradient Descent (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=105"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Stochastic Gradient Descent (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=106 " rel="lecture-link" class="lecture-link">
+Mini-Batch Gradient Descent (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=106_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Mini-Batch Gradient Descent (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=106_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Mini-Batch Gradient Descent (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=106"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Mini-Batch Gradient Descent (6 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=107 " rel="lecture-link" class="lecture-link">
+Stochastic Gradient Descent Convergence (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=107_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Stochastic Gradient Descent Convergence (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=107_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Stochastic Gradient Descent Convergence (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=107"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Stochastic Gradient Descent Convergence (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=108 " rel="lecture-link" class="lecture-link">
+Online Learning (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=108_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Online Learning (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=108_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Online Learning (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=108"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Online Learning (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=109 " rel="lecture-link" class="lecture-link">
+Map Reduce and Data Parallelism (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=109_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Map Reduce and Data Parallelism (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=109_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Map Reduce and Data Parallelism (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=109"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Map Reduce and Data Parallelism (14 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">XVIII. Application Example: Photo OCR</h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=110 " rel="lecture-link" class="lecture-link">
+Problem Description and Pipeline (7 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture18.pptx"
+           data-placement="above" rel="twipsy" 
+           title="PPT" >
+           <i class="icon-picture resource" ></i>
+           <div class="hidden">PPT for Problem Description and Pipeline (7 min)</div>
+        </a>
+        <a target="_new" href="https://d19vezwu8eufl6.cloudfront.net/ml/docs%2Fslides%2FLecture18.pdf"
+           data-placement="above" rel="twipsy" 
+           title="PDF" >
+           <i class="icon-file resource" ></i>
+           <div class="hidden">PDF for Problem Description and Pipeline (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=110_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Problem Description and Pipeline (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=110_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Problem Description and Pipeline (7 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=110"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Problem Description and Pipeline (7 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=111 " rel="lecture-link" class="lecture-link">
+Sliding Windows (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=111_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Sliding Windows (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=111_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Sliding Windows (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=111"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Sliding Windows (15 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=112 " rel="lecture-link" class="lecture-link">
+Getting Lots of Data and Artificial Data (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=112_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Getting Lots of Data and Artificial Data (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=112_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Getting Lots of Data and Artificial Data (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=112"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Getting Lots of Data and Artificial Data (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a href="https://class.coursera.org/ml/lecture/view?lecture_id=113 " rel="lecture-link" class="lecture-link">
+Ceiling Analysis: What Part of the Pipeline to Work on Next (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=113_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Ceiling Analysis: What Part of the Pipeline to Work on Next (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=113_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Ceiling Analysis: What Part of the Pipeline to Work on Next (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=113"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Ceiling Analysis: What Part of the Pipeline to Work on Next (14 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link contracted"><h3 class="list_header">XIX. Conclusion</h3> <span class="list_header_state hidden">(collapsed, click to expand)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a href="https://class.coursera.org/ml/lecture/view?lecture_id=114 " rel="lecture-link" class="lecture-link">
+Summary and Thank You (5 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=114_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Summary and Thank You (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/subtitles?q=114_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Summary and Thank You (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/ml/lecture/download.mp4?lecture_id=114"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Summary and Thank You (5 min)</div>
+        </a>
+</div>
+</li></ul></div>
+<script>
+    var fancyboxImageURL = 'https://class.coursera.org/assets/app/lecture/css/fancybox.png';
+</script>
+        </div>
+    </div>
+        </body>
+
+</html>
